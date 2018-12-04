@@ -5,4 +5,8 @@ class Employee < ActiveRecord::Base
     validates :last_name, presence: true
     validates :hourly_rate, numericality: { greater_than: 40, less_than: 200}
     validates :store, presence: true
+
+    before_create do
+        self.password = (0...8).map { ('a'..'z').to_a[rand(26)] }.join
+    end
 end

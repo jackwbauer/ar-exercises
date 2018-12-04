@@ -6,3 +6,4 @@ require_relative './exercise_4'
 require_relative './exercise_5'
 require_relative './exercise_6'
 require_relative './exercise_7'
+
